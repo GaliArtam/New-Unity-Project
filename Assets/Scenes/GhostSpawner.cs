@@ -5,10 +5,9 @@ using UnityEngine;
 public class GhostSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _prefabGhost;
-    //[SerializeField] private Transform[] _Spaw_Ghost;
+    [SerializeField] private Transform _Spaw_Ghost;
 
     private GameObject _Ghost;
-    private GameObject _Spaw_Ghost;
 
     // Start is called before the first frame update
 
