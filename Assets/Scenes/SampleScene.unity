@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 0bcab0ed6d0ea544d82e9909bfeb2b88, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -4163,7 +4163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598389504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.972, y: 2.48, z: -8.95}
+  m_LocalPosition: {x: -2.972, y: 0.6, z: -7.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1607827757}
@@ -4181,7 +4181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2199864c10b0a294ea149b08d3083228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabGhost: {fileID: 781485674886865474, guid: 7e9cf5262d1032f46b87e1735b3a3c83, type: 3}
+  _prefabGhost: {fileID: 1483506528677888, guid: 1e53ab99435b1194a83bb713baff0dd1, type: 3}
+  _Spaw_Ghost: {fileID: 1598389505}
 --- !u!65 &1598389507
 BoxCollider:
   m_ObjectHideFlags: 0

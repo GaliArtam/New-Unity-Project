@@ -14,7 +14,7 @@ public class GhostSpawner : MonoBehaviour
     private void Start()
     {
         _Ghost = Instantiate(_prefabGhost, _Spaw_Ghost.transform.position, _Spaw_Ghost.transform.rotation);
-        //enabled = false;
+        enabled = true;
     }
     private void OnTriggerEnter(Collider other)
     {
