@@ -5,7 +5,7 @@ using UnityEngine;
 public class GhostSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _prefabGhost;
-    [SerializeField] private Transform _Spaw_Ghost;
+    [SerializeField] private Transform[] _spawGhost;
 
     private GameObject _Ghost;
 
@@ -13,8 +13,9 @@ public class GhostSpawner : MonoBehaviour
 
     private void Start()
     {
-        _Ghost = Instantiate(_prefabGhost, _Spaw_Ghost.transform.position, _Spaw_Ghost.transform.rotation);
+        _Ghost = Instantiate(_prefabGhost, _spawGhost[1].transform.position, _spawGhost[1].transform.rotation);
         _Ghost.SetActive(false);
+        _Ghost.GetComponent<Ghost>().SetMovePoint(_spawGhost);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -22,11 +23,5 @@ public class GhostSpawner : MonoBehaviour
         {
             _Ghost.SetActive(true);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       // _Ghost.transform.Translate(transform.forward * Time.deltaTime);
     }
 }
