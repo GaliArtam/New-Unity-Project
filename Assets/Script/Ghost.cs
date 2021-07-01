@@ -7,7 +7,7 @@ public class Ghost : MonoBehaviour
     [SerializeField] private int _speed = 2;
     private Transform[] _movePoints;
     private bool _isMove;
-    private int _count = 1;
+    private int _count = 0;
     public void SetMovePoint(Transform[] point)
     {
         _movePoints = point;
@@ -17,16 +17,16 @@ public class Ghost : MonoBehaviour
 
     void FixedUpdate()
     {
-        while(true)
-        {
+
             if (_isMove)
             {
-                transform.position = Vector3.Slerp(transform.position, _movePoints[_count].position, Time.fixedDeltaTime * _speed);
-                _count++;
-                if (_count == 2)
-                    _count = 0;
-                
-            }
+                transform.position = Vector3.Slerp(transform.position, _movePoints[_count].position, Time.fixedDeltaTime);
+                if (Vector3.Distance(transform.position, _movePoints[-_count].position) < 1f)
+                { 
+                    if (_count == 2)
+                        _count = 0;
+                    else _count++;
+                }
         }
         
     }

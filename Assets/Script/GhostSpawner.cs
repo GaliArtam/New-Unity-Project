@@ -13,7 +13,7 @@ public class GhostSpawner : MonoBehaviour
 
     private void Start()
     {
-        _Ghost = Instantiate(_prefabGhost, _spawGhost[1].transform.position, _spawGhost[1].transform.rotation);
+        _Ghost = Instantiate(_prefabGhost, _spawGhost[2].transform.position, _spawGhost[2].transform.rotation);
         _Ghost.SetActive(false);
         _Ghost.GetComponent<Ghost>().SetMovePoint(_spawGhost);
     }
