@@ -14,13 +14,13 @@ public class GhostSpawner : MonoBehaviour
     private void Start()
     {
         _Ghost = Instantiate(_prefabGhost, _Spaw_Ghost.transform.position, _Spaw_Ghost.transform.rotation);
-        enabled = true;
+        _Ghost.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
-            enabled = true;
+            _Ghost.SetActive(true);
         }
     }
 
