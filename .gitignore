@@ -338,3 +338,8 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/Temp
+/Logs
+/Library/PackageCache/com.unity.collab-proxy@1.5.7/.Resources
+/Library
+/UserSettings
